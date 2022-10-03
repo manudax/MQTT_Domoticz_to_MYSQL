@@ -1,10 +1,13 @@
 # MQTT_Domoticz_to_MYSQL
 Convert a MQTT frame from sensors or Domoticz to a MYSQL database
 
-Create database :
+#### Create database :<br />
 
-CREATE DATABASE IF NOT EXISTS `database`
-USE `database`;
+CREATE DATABASE IF NOT EXISTS `database`<br />
+USE `database`;<br />
+
+#### Create table :<br />
+
 CREATE TABLE IF NOT EXISTS `sensors` (
   `date` timestamp NOT NULL DEFAULT current_timestamp(),
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -14,4 +17,5 @@ CREATE TABLE IF NOT EXISTS `sensors` (
   `nbr` tinyint(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=22895 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=22895 DEFAULT CHARSET=utf8mb4;<br />
+
