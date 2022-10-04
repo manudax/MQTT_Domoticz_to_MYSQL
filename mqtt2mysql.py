@@ -29,7 +29,6 @@ def on_connect(client, userdata, flags, rc):
 
 # This function updates the sensor's information in the sensor index table
 def sensor_update(db, payload, nbr):
-    print(payload)
     cursor = db.cursor()
     insertRequest = "INSERT INTO sensors(idx, nvalue, svalue, nbr) VALUES("+ str(payload['idx'])+","+str(payload['nvalue'])+",\""+str(payload['svalue'])+"\",\""+str(nbr)+"\")"
     cursor.execute(insertRequest)
